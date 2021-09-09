@@ -236,7 +236,8 @@ La risoluzione di un nome è detta *name resolution*.
 Segue una rappresentazione grafica dell’environment del programma in ogni punto del Source Code:
 
 ```
-			           ┌──────────────────────────┐
+
+                                   ┌──────────────────────────┐
                                ┌───┤Environment 3:            │
                                │   │                          │
                                │   │ x = 10;                  │
