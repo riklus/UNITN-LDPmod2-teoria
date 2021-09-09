@@ -71,7 +71,7 @@ Sono *tre* gli step che il processore impiega per eseguire un’operazione:
     - Se necessatio salva i dati in memoria, setta l’AR etc…
     - **Se necessario modifica il PC (JUMP INSTRUCTIONS)**
 4. In aggiunta alle precedenti tre fasi, ve ne sono altre due necessarie solo in certi casi in cui è necessario accedere alla memoria:
-    - *fase di caricamento dati in memoria*, che effettua il caricamento di un dato dalla memoria;
+    - *fase di caricamento dati dalla memoria*, che effettua il caricamento di un dato dalla memoria;
     - *fase di salvataggio dati*, che permette di salvare il risultato di un'operazione all'interno di un registro.
 
 ![execflow.png](Macchine%20Astratte%2058a99dc45481448c9a26c344c9994cc7/execflow.png)
