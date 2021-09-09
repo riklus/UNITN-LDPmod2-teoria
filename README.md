@@ -3,6 +3,10 @@
 Una dispensa appunti di Linguaggi di Programmazione modulo 2, un corso tenuto nell'Università di Trento dal Professor Kuper.  
 Questi appunti provengono direttamente dalle slides del corso, _tradotte in italiano_ e leggermente revisionate.
 
+## [Consulta!](LDP2%20c9928203ed354d5da151a797f5618e5b.md)
+
+Clicca il titolo per consultare la dispensa.
+
 ## Consigli per passare il corso
 
 È possibile passare il corso in 4 mosse:
