@@ -8,7 +8,7 @@ Un computer è composto dalle seguenti componenti fisiche:
     - Esegue le istruzioni macchina.
     - Muove i dati da e alla memoria.
 2. **Memoria centrale (RAM)**
-    - Stores dati e programmi (sequenze di istruzioni macchina).
+    - Memorizza dati e programmi (sequenze di istruzioni macchina).
     - Veloce ma volatile.
 3. **Mass storage device**
     - Più lento della RAM ma persistente.
@@ -52,7 +52,7 @@ E sono:
     - **Data Register (DR):** Data da leggere e/o scrivere.
 2. Visibili (Alle istruzioni macchina)
 E sono:
-    - **Program Counter (PC):** L’indirizzo della prossima istruzione d eseguire, chiamata anche Pointer (IP).
+    - **Program Counter (PC):** L’indirizzo della prossima istruzione d eseguire, chiamata anche _Instruction Pointer_ (IP).
     - **Status Register (SR):** Flags che descrivono il risultato di un’operazione dell’ALU e lo stato della macchina, chaiamata anche F (Flag Register).
     - Molti registri per dati e indirizzi.
 
@@ -70,14 +70,17 @@ Sono *tre* gli step che il processore impiega per eseguire un’operazione:
     - Se necessario carica i dati dalla memoria, imposta l’AR, legge il DR etc…
     - Se necessatio salva i dati in memoria, setta l’AR etc…
     - **Se necessario modifica il PC (JUMP INSTRUCTIONS)**
+4. In aggiunta alle precedenti tre fasi, ve ne sono altre due necessarie solo in certi casi in cui è necessario accedere alla memoria:
+    - *fase di caricamento dati in memoria*, che effettua il caricamento di un dato dalla memoria;
+    - *fase di salvataggio dati*, che permette di salvare il risultato di un'operazione all'interno di un registro.
 
 ![execflow.png](Macchine%20Astratte%2058a99dc45481448c9a26c344c9994cc7/execflow.png)
 
-Execution of a program
+Esecuzione di un programma
 
 La CPU cicla ed esegue le stesse istruzioni, e di solito le esegue in modo *sequenziale*.
 
-La macchina è *designed* per eseguire un linguaggio specifico, **LM**: Machine Language.
+Ogni macchina è progettata per eseguire un linguaggio specifico, **LM**: Machine Language.
 
 ## Main Memory
 
@@ -93,18 +96,18 @@ L’accesso in memoria avviene nel seguente modo:
 
 ![Untitled](Macchine%20Astratte%2058a99dc45481448c9a26c344c9994cc7/Untitled.png)
 
-Example of a CPU
+Esempio di una CPU
 
-Questo è un esempio semplificato di CPU, le CPU moderne sono costituite anche da *pipelines* e *parallelism*.
+Questo è un esempio semplificato di CPU. Le CPU moderne sono costituite anche da *pipelines* e *parallelism*.
 
 # Physical Machine
 
-Una macchina fisica o *Computer* è una macchina *designed* per l’esecuzione di programmi.
+Una macchina fisica o *Computer* è una macchina *progettata* per l’esecuzione di programmi.
 
 Ogni macchina esegue programmi scritti nel proprio linguaggio.
 
 Esiste una stretta relazione tra la macchina e un linguaggio:
-Ogni macchina ha il suo linguaggio che può capire ed eseguire, ma lo stesso linguaggio può essere eseguito da diverse macchine.
+Ogni macchina ha il suo linguaggio che può capire ed eseguire, ma lo stesso linguaggio può essere eseguito da diverse macchine. Inoltre, una macchina può eseguire **SOLO** il linguaggio che può comprendere, cioè il suo linguaggio macchina.
 
 L’esecuzione di un programma può avvenire attraverso:
 
@@ -115,13 +118,10 @@ In linea teorica il **processore** è una *implementazione fisica di un algoritm
 
 # Abstract Machine
 
-Una **macchina astratta** è una collezione di algoritmi e strutture dati che ci consente di eseguire programmi. A differenza di un processore la macchina astratta è implementata a livello **software**. Similarmente a una macchina fisica anche la macchina astratta è associata a un **linguaggio**.
+Una **macchina astratta** $M_L$ è una collezione di algoritmi e strutture dati che ci consente di eseguire programmi scritti in *L*. A differenza di un processore la macchina astratta è implementata a livello **software**. Similarmente a una macchina fisica anche la macchina astratta è associata a un **linguaggio**.
 
-- $M_L$: è una macchina astratta che comprende ed esegue il linguaggio *L*.
 - $L$ è il *linguaggio macchina* per $M_L$.
-- **Un programma** è una *sequenza di istruzioni scritte in* $L$.
-
-$M_L$ è un modo per descrivere $L$. (???)
+- Un **programma** è una *sequenza di istruzioni scritte in* $L$.
 
 ## Operazione di una Macchina Astratta
 
@@ -248,7 +248,7 @@ $P^L(i) = o$ dove:
 
 Interpreti e compilatori sono anch’essi programmi che prendono come input altri programmi.
 
-## Definizione di un interpreter
+## Definizione di un interprete
 
 Definiamo, per esempio, un interprete di un linguaggio $L$ scritto in linguaggio $LO$ il quale implementa una *macchina astratta* $M_L$ su una *macchina astratta* $MO_{LO}$.
 
