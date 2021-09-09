@@ -5,7 +5,8 @@ Questi appunti provengono direttamente dalle slides del corso, _tradotte in ital
 
 ## [Consulta!](LDP2%20c9928203ed354d5da151a797f5618e5b.md)
 
-Clicca il titolo per consultare la dispensa.
+Clicca il titolo per consultare la dispensa.  
+Per renderizzare le formule latex ti consiglio di usare un Markdown Viewer clonando prima la repo. Ci sono anche estensioni chrome apposite.
 
 ## Consigli per passare il corso
 
