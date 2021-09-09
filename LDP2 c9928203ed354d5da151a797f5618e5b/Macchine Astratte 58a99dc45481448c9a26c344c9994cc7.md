@@ -52,7 +52,7 @@ E sono:
     - **Data Register (DR):** Data da leggere e/o scrivere.
 2. Visibili (Alle istruzioni macchina)
 E sono:
-    - **Program Counter (PC):** L’indirizzo della prossima istruzione d eseguire, chiamata anche _Instruction Pointer_ (IP).
+    - **Program Counter (PC):** L’indirizzo della prossima istruzione da eseguire, chiamata anche _Instruction Pointer_ (IP).
     - **Status Register (SR):** Flags che descrivono il risultato di un’operazione dell’ALU e lo stato della macchina, chaiamata anche F (Flag Register).
     - Molti registri per dati e indirizzi.
 
